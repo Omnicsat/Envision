@@ -1,14 +1,14 @@
 const Discord = require('discord.js')
 const Canvas = require('canvas')
 const Image = Canvas.Image;
-const canvas = new Canvas(300, 300);
+const canvas = new Canvas(500, 300);
 const ctx = canvas.getContext('2d');
 const fs = require('fs');
 const out = fs.createWriteStream('./text.png');
 
 module.exports = (client, message, args) => {
     ctx.font = '30px Impact';
-    ctx.rotate(0.1);
+    ctx.rotate(0);
     ctx.fillText("Dynamic image rendering!", 50, 100);
     
     var te = ctx.measureText('Dynamic');
