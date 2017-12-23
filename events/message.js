@@ -15,8 +15,10 @@ module.exports = (client, message) => {
     if (client.adminCommands.has(command)) {
         if (message.member.hasPermission("ADMINISTRATOR")) {
             client.adminCommands.get(command)(client, message, args);
+            client.log('Administrative', `${message.author.tag} executed an administrative command. (${command})`);
         } else {
             message.channel.send(`I'm sorry ${message.member.user}, you don't have that permission!`);
+            client.log('Administrative', `${message.author.tag} tried and failed to execute an administrative command. (${command})`);
         }
     }
 }

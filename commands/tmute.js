@@ -18,5 +18,5 @@ module.exports = (client, message, args) => {
     }, timeOut * 60000);
 
     message.reply(`${operativeUser.user} has been muted for ${timeOut} minutes!`);
-    client.log('Administration', `${operativeUser.displayName} was muted by ${message.member.displayName} for ${timeOut} minutes.`);
+    client.log('Administration', `${operativeUser.user.tag} was muted by ${message.author.tag} for ${timeOut} minutes.`);
 }

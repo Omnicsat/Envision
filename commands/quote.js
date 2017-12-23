@@ -20,12 +20,14 @@ module.exports = (client, message, args) => {
                 .setFooter(`Quoted by ${message.member.displayName}`, message.author.displayAvatarURL)
                 .setThumbnail(msg.author.displayAvatarURL);
 
-            message.channel.send({embed});
+            message.channel.send({
+                embed
+            });
             message.delete();
 
         })
         .catch(e => {
-            console.error(e);
+            client.log('Error', `${message.author.tag} misquoted a message.`)
             message.channel.send('That message either does not exist, or is not in the right channel!');
         });
 
