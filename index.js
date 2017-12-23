@@ -24,6 +24,7 @@ client.on('message', message => require('./events/message.js')(client, message))
 client.on('guildCreate', guild => require('./events/guildCreate')(client, guild));
 client.on('ready', () => require('./events/ready.js')(client));
 client.on('guildMemberAdd', member => require('./events/guildMemberAdd.js')(client, member));
+client.on('guildMemberRemove', member => require('./events/guildMemberRemove.js')(client, member));
 client.on('error', err => require('./events/error.js')(client, err));
 
 client.login(client.config.token);
