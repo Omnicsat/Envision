@@ -1,0 +1,28 @@
+{
+  "name": "envision",
+  "version": "0.2.5",
+  "description": "A small Discord bot for the KSPNS.",
+  "main": "index.js",
+  "dependencies": {
+    "canvas": "^1.6.9",
+    "discord.js": "^11.2.1",
+    "jshint": "^2.9.5",
+    "jsonfile": "^4.0.0",
+    "nsapi": "^0.1.14",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omnicsat/Envision.git"
+  },
+  "author": "Omni",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Omnicsat/Envision/issues"
+  },
+  "homepage": "https://github.com/Omnicsat/Envision#readme"
+}
