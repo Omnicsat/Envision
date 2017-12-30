@@ -17,6 +17,6 @@ module.exports = (client, message, args) => {
             .then(message.channel.send(`The mute on ${operativeUser} has expired.`));
     }, timeOut * 60000);
 
-    message.reply(`${operativeUser.user} has been muted for ${timeOut} minutes!`);
+    message.reply(`${operativeUser.displayName} has been muted for ${timeOut} minutes!`);
     client.log('Administration', `${operativeUser.user.tag} was muted by ${message.author.tag} for ${timeOut} minutes.`);
 }
