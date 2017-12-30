@@ -1,12 +1,13 @@
 const Discord = require('discord.js');
 
 module.exports = (client, message, args) => {
+
+    if (!args[1]) {
+        return message.channel.send('Please provide a channel in which to fetch the quote.');
+    }
+    
     let channel = message.guild.channels.find("name", args[1]);
     let messageId = args[0];
-
-    if (!channel) {
-        return message.channel.send("Please specify a real channel!");
-    }
 
     channel.fetchMessage(messageId)
         .then(msg => {
