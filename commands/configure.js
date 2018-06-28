@@ -22,7 +22,7 @@ module.exports = (client, message, args) => {
                 })
                   .catch(console.error)
             )
-             .catch(console.error)
+             .catch(console.error) &&
              message.channel.send(`Configured successfully`)
         );
     }
