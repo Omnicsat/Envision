@@ -21,9 +21,9 @@ module.exports = (client, message, args) => {
                      SEND_MESSAGES: false
                 })
                   .catch(console.error)
-            )
-             .catch(console.error) &
-             message.channel.send(`Configured successfully`)
-        );
+            ) &
+             message.channel.send(`Configured successfully!`)
+        )
+        .catch(console.error);
     }
 }
