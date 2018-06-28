@@ -11,7 +11,7 @@ module.exports = (client, message, args) => {
             color: 'RED',
         })
           .then(muterole => 
-            client.log('Administration',`Created new muted role on guild ${message.guild.name} (${message.guild.id})`))
+            client.log('Administration',`Created new muted role on guild ${message.guild.name} (${message.guild.id})`) &&
     
             message.guild.channels.filter(c =>
                 c.type === "text"
@@ -22,7 +22,8 @@ module.exports = (client, message, args) => {
                 })
                   .catch(console.error)
             )
-             .catch(console.error);
-             message.channel.send(`Configured successfully`);
+             .catch(console.error)
+             message.channel.send(`Configured successfully`)
+        );
     }
 }
