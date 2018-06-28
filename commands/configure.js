@@ -17,7 +17,7 @@ module.exports = (client, message, args) => {
             c.type === "text"
         )
          .forEach(c => 
-                c.overwritePermissions(mutedrole, {
+                c.overwritePermissions(muterole, {
                  SEND_MESSAGES: false
             })
               .catch(console.error)
