@@ -10,17 +10,19 @@ module.exports = (client, message, args) => {
             name: 'muted',
             color: 'RED',
         })
-          .then(role => client.log('Administration',`Created new muted role on guild ${message.guild.name} (${message.guild.id})`))
-          .catch(console.error);
+          .then(muterole => 
+            client.log('Administration',`Created new muted role on guild ${message.guild.name} (${message.guild.id})`))
     
-        message.guild.channels.filter(c =>
-            c.type === "text"
-        )
-         .forEach(c => 
-                c.overwritePermissions(message.guild.roles.find('name', 'muted'), {
-                 SEND_MESSAGES: false
-            })
-              .catch(console.error)
-        );
+            message.guild.channels.filter(c =>
+                c.type === "text"
+            )
+             .forEach(c => 
+                    c.overwritePermissions(muterole, {
+                     SEND_MESSAGES: false
+                })
+                  .catch(console.error)
+            )
+             .catch(console.error);
+             message.channel.send(`Configured successfully`);
     }
 }
