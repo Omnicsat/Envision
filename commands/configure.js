@@ -6,12 +6,13 @@ module.exports = (client, message, args) => {
         return;
     } else {
     
-        let muterole = message.guild.createRole({
+        message.guild.createRole({
             name: 'muted',
             color: 'RED',
         })
           .then(role => client.log('Administration',`Created new muted role on guild ${message.guild.name} (${message.guild.id})`))
           .catch(console.error);
+        let muterole = message.guild.roles.find("name", "muted");
     
         message.guild.channels.filter(c =>
             c.type === "text"
