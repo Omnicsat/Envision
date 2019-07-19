@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = (client, message, args) => {
 
     if (!args[1]) {
-        return message.channel.send('Please provide a channel in which to fetch the quote.');
+        return message.channel.send('Please provide a channel in which to fetch the quote, and a vald message ID.');
     }
     
     let channel = message.guild.channels.find("name", args[1]);
