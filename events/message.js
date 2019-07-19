@@ -10,9 +10,9 @@ module.exports = (client, message) => {
 
     if (client.commands.has(command)) {
         client.commands.get(command)(client, message, args);
-    }
-
-    if (client.adminCommands.has(command)) {
+    }   
+    
+    else if (client.adminCommands.has(command)) {
         if (message.member.hasPermission("ADMINISTRATOR")) {
             client.adminCommands.get(command)(client, message, args);
             client.log('Administrative', `${message.author.tag} executed an administrative command. (${command})`);

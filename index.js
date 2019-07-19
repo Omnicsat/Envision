@@ -19,6 +19,8 @@ client.commands.set('canvastest', require('./commands/canvas.js'));
 client.adminCommands.set('purge', require('./commands/purge.js'));
 client.adminCommands.set('tmute', require('./commands/tmute.js'));
 client.adminCommands.set('announce', require('./commands/announce.js'));
+client.adminCommands.set('configure', require('./commands/configure.js'));
+//client.adminCommands.set('playtest', require('./commands/playtest.js'));
 
 client.on('message', message => require('./events/message.js')(client, message));
 client.on('guildCreate', guild => require('./events/guildCreate')(client, guild));
