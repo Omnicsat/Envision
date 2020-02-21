@@ -2,9 +2,9 @@ module.exports = (client, message, args) => {
       let targetID = message.id;
       let targetChannel = message.channel;
       let toRemove = [];
-      messages = targetChannel.fetchMessages( { limit: 1000 })
+      let messages = targetChannel.fetchMessages( { limit: 1000 })
       for (x in messages) {
-          if (x.id) == targetID) {
+          if (x.id == targetID) {
             break;
           } else {
             toRemove.push(x);
