@@ -14,7 +14,7 @@ client.commands.set('info', require('./commands/info.js'));
 client.commands.set('map', require('./commands/map.js'));
 client.commands.set('thread', require('./commands/thread.js'));
 client.commands.set('quote', require('./commands/quote.js'));
-client.commands.set('canvastest', require('./commands/canvas.js'));
+//client.commands.set('canvastest', require('./commands/canvas.js'));
 
 client.adminCommands.set('purge', require('./commands/purge.js'));
 client.adminCommands.set('tmute', require('./commands/tmute.js'));

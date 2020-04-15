@@ -4,11 +4,13 @@
   "description": "A small Discord bot for the KSPNS.",
   "main": "index.js",
   "dependencies": {
+    "@discordjs/opus": "^0.1.0",
     "canvas": "^1.6.13",
-    "discord.js": "^11.5.1",
+    "discord.js": "^12.1.1",
     "fs": "^0.0.1-security",
-    "jshint": "^2.10.2",
+    "jshint": "^2.11.0",
     "jsonfile": "^4.0.0",
+    "node-gyp": "^6.1.0",
     "nsapi": "^0.1.15"
   },
   "devDependencies": {},
