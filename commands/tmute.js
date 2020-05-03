@@ -9,11 +9,11 @@ module.exports = (client, message, args) => {
         return message.reply("Please specify a (real) user to mute!");
     };
 
-    let operativeRole = message.guild.roles.find("name", "muted");
-    operativeUser.addRole(operativeRole);
+    let operativeRole = message.guild.roles.cache.find(role => role.name === "muted");
+    operativeUser.roles.add(operativeRole);
 
     client.setTimeout(function () {
-        operativeUser.removeRole(operativeRole)
+        operativeUser.roles.remove(operativeRole)
             .then(message.channel.send(`The mute on ${operativeUser} has expired.`));
     }, timeOut * 60000);
 

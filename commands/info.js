@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 
 module.exports = (client, message, args) => {
-    const embed = new Discord.RichEmbed()
+    const embed = new Discord.MessageEmbed()
         .setColor(987)
-        .setAuthor("Envision Information Page", client.user.displayAvatarURL)
+        .setAuthor("Envision Information Page")
         .setTitle("Main Envision Information Page")
         .setDescription(`Run ${client.config.prefix}help <command> for usage information.`)
         .addField("Primary Commands", Array.from(client.commands.keys()), true)

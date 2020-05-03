@@ -6,13 +6,13 @@ module.exports = (client, message, args) => {
         return message.channel.send('Please provide a channel in which to fetch the quote, and a vald message ID.');
     }
     
-    let channel = message.guild.channels.find("name", args[1]);
+    let channel = message.guild.channels.cache.find(channel => channel.name === args[1]);
     let messageId = args[0];
 
-    channel.fetchMessage(messageId)
+    channel.messages.fetch(messageId)
         .then(msg => {
 
-            let embed = new Discord.RichEmbed();
+            let embed = new Discord.MessageEmbed();
             embed.setTitle("Quote:")
                 .setAuthor(msg.member.displayName, msg.author.displayAvatarURL)
                 .setColor(987)
